@@ -30,8 +30,6 @@ Compilation of some useful fish shell functions. Lots of shortcuts for common ac
 
 `z`: Quick and smart archive handling (depends on [`dtrx`](https://github.com/moonpyk/dtrx)
 
-`bu`: Create a backup of `item` (file or directory) to `_item_.bak`.
-
 * Usage: `z [-opts] file.ext`<br/>
 Extracts any archive with options acceptable to dtrx (see: dtrx --help)<br/>
 Example: `z -vo test.tar.bz2`
@@ -39,6 +37,8 @@ Example: `z -vo test.tar.bz2`
 Compresses _input_ file/directory, optionally verbosely, to _output_.tar.bz2. If output is omitted, it will create an archive with the name _input_.tar.bz2.<br/>
 Example: `z -v test test2`<br/>
 This will create a tar bz2 compressed archive name test2.tar.bz2
+
+`bu`: Create a backup of `item` (file or directory) to `_item_.bak`.
 
 ### Apt Shortcuts
 `search`: Search for packages by keyword(s) in apt's cache.
