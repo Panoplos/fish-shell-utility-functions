@@ -1,4 +1,4 @@
-function cpmp -d 'Copy item to directory, creating parents directories.'
+function cpmp -d 'Copy item to directory, creating parent directories as needed.'
 	if test ! -e $argv[1]
 		echo Error: $argv[1] does not exist!
 		return -1

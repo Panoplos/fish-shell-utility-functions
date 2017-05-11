@@ -2,7 +2,7 @@ function z -d "Quick archive handling..."
 	# Usage:
 	#
 	# z [-opts] <file>.ext
-	#   For are extracting any archive with options acceptable to dtrx (see: dtrx --help)
+	#   For extracting any archive with options acceptable to dtrx (see: dtrx --help)
 	#   Example: z -vo test.tar.bz2
 	#	
 	# z [-v] <file/directory> [output]

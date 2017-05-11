@@ -13,7 +13,7 @@ function mvmp -d "Move item to directory, creating parents directories."
 		end
 	else
 		echo Moving $argv[1] to new directory \(with parents\) $argv[2]/
-		mkdir -p $argv[2] ; mv $argv[1] $argv[2]/
+		mkdir -p $argv[2] ; mv $argv[1] $argv[2]
 	end
 end
 
