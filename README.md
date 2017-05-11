@@ -28,7 +28,9 @@ Compilation of some useful fish shell functions. Lots of shortcuts for common ac
 
 `rmrf`: Shortcut for `rm -rf`. Of course, use with caution!
 
-`z`: Quick and smart archive handling (depends on [`dtrx`](https://github.com/moonpyk/dtrx))
+`z`: Quick and smart archive handling (depends on [`dtrx`](https://github.com/moonpyk/dtrx)
+
+`bu`: Create a backup of `item` (file or directory) to `_item_.bak`.
 
 * Usage: `z [-opts] file.ext`<br/>
 Extracts any archive with options acceptable to dtrx (see: dtrx --help)<br/>
