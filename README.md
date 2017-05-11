@@ -38,7 +38,7 @@ Compresses _input_ file/directory, optionally verbosely, to _output_.tar.bz2. If
 Example: `z -v test test2`<br/>
 This will create a tar bz2 compressed archive name test2.tar.bz2
 
-`bu`: Create a backup of `item` (file or directory) to `_item_.bak`.
+`bu`: Create a backup of `item` (file or directory) to `item.bak`.
 
 ### Apt Shortcuts
 `search`: Search for packages by keyword(s) in apt's cache.
