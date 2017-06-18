@@ -40,6 +40,14 @@ This will create a tar bz2 compressed archive name test2.tar.bz2
 
 `bu`: Create a backup of `item` (file or directory) to `item.bak`.
 
+### String Manipulation
+`sedr`: `sed -E` compliant in-place recursive regex replace.
+
+* Usage: `sedr [dir] regex`<br/>
+Where _dir_ is the top-level directory, is optional and defaults to CWD.<br/>
+Example: `sedr testing s/foo/bar/g`<br/>
+This will recurse the directory _testing_, replacing all instances of _foo_ with _bar_.
+
 ### Apt Shortcuts
 `search`: Search for packages by keyword(s) in apt's cache.
 
