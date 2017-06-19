@@ -11,7 +11,7 @@ function z -d "Quick archive handling..."
 	#			This will create a tar bz2 compressed archive name test2.tar.bz2
 	#
 	for i in (seq (count $argv))
-		if contains -- (string split -- . $argv[$i])[-1] tar gz bz2 rar zip tgz z7
+		if contains -- (string split -- . $argv[$i])[-1] tar gz bz2 rar zip tgz 7z
 			dtrx $argv
 			return 0
 		end
