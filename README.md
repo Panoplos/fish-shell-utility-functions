@@ -61,7 +61,7 @@ This will recurse the directory _testing_, replacing all instances of _foo_ with
 
 `ins`: Install new package.
 
-`rem`: Remove package.
+`rem`: Remove package(s). Supply only `--auto` to autoremove packages no longer needed.
 
 ### Installation
 
