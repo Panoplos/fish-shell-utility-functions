@@ -15,7 +15,7 @@ Compilation of some useful fish shell functions. Lots of shortcuts for common ac
 
 `f`: Shortcut for `find <dir: default='.'> | xargs grep <string> -`
 
-* Usage: `find /usr/lib fish`
+* Usage: `f /usr/lib fish`
 
 `cpmp`: Copy file or directory (and sub dirs) to target and make parent directories if necessary.
 
@@ -39,6 +39,10 @@ Example: `z -v test test2`<br/>
 This will create a tar bz2 compressed archive name test2.tar.bz2
 
 `bu`: Create a backup of `item` (file or directory) to `item.bak`.
+
+`sign`: GPG Sign a text document, outputing result as <filename.ext>.signed
+
+* Usage: `sign filename.ext`
 
 ### String Manipulation
 `sedr`: `sed -E` compliant in-place recursive regex replace.

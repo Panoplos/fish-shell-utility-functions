@@ -1,2 +1,5 @@
 recr.fish
 renr.fish
+disable-gdb-attach.fish
+enable-gdb-attach.fish
+sup-add-dir.fish

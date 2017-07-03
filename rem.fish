@@ -1,4 +1,8 @@
 function rem -d "sudo apt-get remove shortcut..."
-	sudo apt-get remove $argv
+	if test $argv[1] = "--auto"
+		sudo apt autoremove
+	else
+		sudo apt-get remove $argv
+	end
 end
 
