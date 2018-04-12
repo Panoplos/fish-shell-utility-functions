@@ -1,3 +1,17 @@
+set fish_git_dirty_color cyan
+set fish_git_not_dirty_color green
+
+function parse_git_branch
+  set -l branch (git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\1/')
+  set -l git_status (git status -s)
+
+  if test -n "$git_status"
+    echo -n -s (set_color $fish_git_dirty_color) ±$branch(set_color normal)
+  else
+    echo -n -s (set_color $fish_git_not_dirty_color) $branch(set_color normal)
+  end
+end
+
 function fish_prompt
   set -l cyan (set_color cyan)
   set -l yellow (set_color yellow)
@@ -7,6 +21,8 @@ function fish_prompt
   set -l normal (set_color normal)
 
   set -l cwd $blue(pwd | sed "s:^$HOME:~:")
+
+  set -l git_dir (git rev-parse --git-dir 2> /dev/null)
 
   # Output the prompt, left to right
 
@@ -19,21 +35,13 @@ function fish_prompt
   end
 
   # Print pwd or full path
-  echo -n -s $cwd $normal
-
-  # Show git branch and status
-  #if [ (_git_branch_name) ]
-  #  set -l git_branch (_git_branch_name)
-  #
-  #  if [ (_git_is_dirty) ]
-  #    set git_info '(' $yellow $git_branch "±" $normal ')'
-  #  else
-  #    set git_info '(' $green $git_branch $normal ')'
-  #  end
-  #  echo -n -s ' · ' $git_info $normal
-  #end
+  if test -n "$git_dir"
+    echo -n -s (prompt_pwd)' '(set_color normal)  \((parse_git_branch)\)
+  else
+    echo -n -s (set_color $fish_color_cwd) (prompt_pwd) (set_color normal)
+  end
 
   # Terminate with a nice prompt char
   echo -e ''
-  echo -e -n -s '⟩ ' $normal
+  echo -e -n -s 'app.credify.one 〉' $normal
 end
